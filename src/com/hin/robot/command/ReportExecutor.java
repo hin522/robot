@@ -24,6 +24,6 @@ public class ReportExecutor extends Executor {
 		sb.append(robot.getPosition().getCoordinateY());
 		sb.append(",");
 		sb.append(robot.getDirection().name());
-		out.print(sb.toString());
+		out.println(sb.toString());
 	}
 }
