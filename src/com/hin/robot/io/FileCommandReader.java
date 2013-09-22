@@ -11,16 +11,15 @@ import com.hin.robot.model.Command;
 public class FileCommandReader implements CommandReader {
 
 	private String fileName;
-	private List<Command> commands;
 
 	public FileCommandReader(String fileName) {
 		this.fileName = fileName;
-		commands = new ArrayList<Command>();
 	}
 	
 	@Override
-	public void readCommands() {
+	public List<Command> readCommands() {
 		BufferedReader reader = null;
+		List<Command> commands = new ArrayList<Command>();
 		
 		try {
 			String input;
@@ -39,9 +38,6 @@ public class FileCommandReader implements CommandReader {
 				ex.printStackTrace();
 			}
 		}
-	}
-
-	public List<Command> getCommands() {
 		return commands;
 	}
 
